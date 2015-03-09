@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:")))
+        {
+            application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
+        }
+        else
+        {
+            //do iOS 7 stuff, which is pretty much nothing for local notifications.
+        }
+        
         return true
     }
 
@@ -40,7 +50,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        if (application.applicationState == UIApplicationState.Active) {
+            // 起動中のとき
+            var alert = UIAlertView()
+//            alert.title = "Wake up!"
+            alert.message = notification.alertBody
+            alert.addButtonWithTitle(notification.alertAction!)
+            alert.show()
+        } else {
+            // ここでバックグラウンドから復帰したときの処理
+        }
 
+        transitToWakeupScene()
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        transitToWakeupScene()
+    }
+    
+    func transitToWakeupScene() {
+        let wakeupViewController: UIViewController = WakeupViewController()
+        wakeupViewController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        self.window?.rootViewController?.presentViewController(wakeupViewController, animated: true, completion: nil);
+    }
 
 }
 

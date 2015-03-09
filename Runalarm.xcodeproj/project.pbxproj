@@ -7,12 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20320DF1AA1EEFE00680DF4 /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20320DE1AA1EEFE00680DF4 /* AlarmManager.swift */; };
+		C2A8C0281AA494C300111BBB /* wakeup_03_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2A8C0261AA494C300111BBB /* wakeup_03_short.mp3 */; };
+		C2A8C02B1AA50F3000111BBB /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C02A1AA50F3000111BBB /* GoogleMobileAds.framework */; };
+		C2A8C02D1AA50FE900111BBB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C02C1AA50FE900111BBB /* AdSupport.framework */; };
+		C2A8C02F1AA50FF400111BBB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C02E1AA50FF400111BBB /* AudioToolbox.framework */; };
+		C2A8C0311AA5100000111BBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C0301AA5100000111BBB /* AVFoundation.framework */; };
+		C2A8C0331AA5100F00111BBB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C0321AA5100F00111BBB /* CoreGraphics.framework */; };
+		C2A8C0351AA5101D00111BBB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C0341AA5101D00111BBB /* CoreTelephony.framework */; };
+		C2A8C0371AA5103400111BBB /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C0361AA5103400111BBB /* EventKit.framework */; };
+		C2A8C0391AA5103B00111BBB /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C0381AA5103B00111BBB /* EventKitUI.framework */; };
+		C2A8C03B1AA5104F00111BBB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C03A1AA5104F00111BBB /* MessageUI.framework */; };
+		C2A8C03F1AA5106700111BBB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8C03E1AA5106700111BBB /* SystemConfiguration.framework */; };
+		C2A8C0431AA5CDE300111BBB /* wakeup_03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2A8C0421AA5CDE300111BBB /* wakeup_03.mp3 */; };
+		C2A8C0471AA5D5F700111BBB /* VolumeControlIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A8C0461AA5D5F700111BBB /* VolumeControlIcon.png */; };
+		C2A8C0491AA8A9A500111BBB /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8C0481AA8A9A500111BBB /* MediaPlayer.swift */; };
+		C2BBB5D91A96903800F840C0 /* GoodMorningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBB5D81A96903800F840C0 /* GoodMorningViewController.swift */; };
+		C2BBB5E01A9BDA2300F840C0 /* good_morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2BBB5DF1A9BDA2300F840C0 /* good_morning.mp3 */; };
+		C2BBB5EC1A9E853D00F840C0 /* ic_runalarm_180x180_nobg.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BBB5EB1A9E853D00F840C0 /* ic_runalarm_180x180_nobg.png */; };
+		C2C306C31A90B8F400EFEDD2 /* GoodMorningBackground.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C2C306C11A90B8F400EFEDD2 /* GoodMorningBackground.JPG */; };
+		C2C306C41A90B8F400EFEDD2 /* SettingBackground.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C2C306C21A90B8F400EFEDD2 /* SettingBackground.JPG */; };
 		C2EDE9CF1A86395E004B8614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDE9CE1A86395E004B8614 /* AppDelegate.swift */; };
-		C2EDE9D11A86395E004B8614 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDE9D01A86395E004B8614 /* ViewController.swift */; };
+		C2EDE9D11A86395E004B8614 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDE9D01A86395E004B8614 /* SettingViewController.swift */; };
 		C2EDE9D41A86395E004B8614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EDE9D21A86395E004B8614 /* Main.storyboard */; };
 		C2EDE9D61A86395E004B8614 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2EDE9D51A86395E004B8614 /* Images.xcassets */; };
 		C2EDE9D91A86395E004B8614 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2EDE9D71A86395E004B8614 /* LaunchScreen.xib */; };
 		C2EDE9E51A86395E004B8614 /* RunalarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDE9E41A86395E004B8614 /* RunalarmTests.swift */; };
+		C2EDE9EF1A8797ED004B8614 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDE9EE1A8797ED004B8614 /* HRToast+UIView.swift */; };
+		C2EDE9F11A8C1069004B8614 /* WakeupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EDE9F01A8C1069004B8614 /* WakeupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +48,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20320DE1AA1EEFE00680DF4 /* AlarmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
+		C2A8C0261AA494C300111BBB /* wakeup_03_short.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wakeup_03_short.mp3; sourceTree = "<group>"; };
+		C2A8C02A1AA50F3000111BBB /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		C2A8C02C1AA50FE900111BBB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C2A8C02E1AA50FF400111BBB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C2A8C0301AA5100000111BBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C2A8C0321AA5100F00111BBB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C2A8C0341AA5101D00111BBB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C2A8C0361AA5103400111BBB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		C2A8C0381AA5103B00111BBB /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		C2A8C03A1AA5104F00111BBB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C2A8C03E1AA5106700111BBB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C2A8C0411AA5172F00111BBB /* AdMob-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdMob-Bridging-Header.h"; sourceTree = "<group>"; };
+		C2A8C0421AA5CDE300111BBB /* wakeup_03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wakeup_03.mp3; sourceTree = "<group>"; };
+		C2A8C0461AA5D5F700111BBB /* VolumeControlIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VolumeControlIcon.png; sourceTree = "<group>"; };
+		C2A8C0481AA8A9A500111BBB /* MediaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		C2BBB5D81A96903800F840C0 /* GoodMorningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodMorningViewController.swift; sourceTree = "<group>"; };
+		C2BBB5DA1A996A5200F840C0 /* Runalarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Runalarm.entitlements; sourceTree = "<group>"; };
+		C2BBB5DF1A9BDA2300F840C0 /* good_morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good_morning.mp3; sourceTree = "<group>"; };
+		C2BBB5EB1A9E853D00F840C0 /* ic_runalarm_180x180_nobg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_runalarm_180x180_nobg.png; path = Images.xcassets/AppIcon.appiconset/ic_runalarm_180x180_nobg.png; sourceTree = "<group>"; };
+		C2C306C11A90B8F400EFEDD2 /* GoodMorningBackground.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = GoodMorningBackground.JPG; path = img/GoodMorningBackground.JPG; sourceTree = "<group>"; };
+		C2C306C21A90B8F400EFEDD2 /* SettingBackground.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SettingBackground.JPG; path = img/SettingBackground.JPG; sourceTree = "<group>"; };
 		C2EDE9C91A86395E004B8614 /* Runalarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runalarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EDE9CD1A86395E004B8614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2EDE9CE1A86395E004B8614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2EDE9D01A86395E004B8614 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2EDE9D01A86395E004B8614 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C2EDE9D31A86395E004B8614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2EDE9D51A86395E004B8614 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C2EDE9D81A86395E004B8614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C2EDE9DE1A86395E004B8614 /* RunalarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunalarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EDE9E31A86395E004B8614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2EDE9E41A86395E004B8614 /* RunalarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunalarmTests.swift; sourceTree = "<group>"; };
+		C2EDE9EE1A8797ED004B8614 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
+		C2EDE9F01A8C1069004B8614 /* WakeupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WakeupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +89,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A8C02B1AA50F3000111BBB /* GoogleMobileAds.framework in Frameworks */,
+				C2A8C03F1AA5106700111BBB /* SystemConfiguration.framework in Frameworks */,
+				C2A8C03B1AA5104F00111BBB /* MessageUI.framework in Frameworks */,
+				C2A8C0391AA5103B00111BBB /* EventKitUI.framework in Frameworks */,
+				C2A8C0371AA5103400111BBB /* EventKit.framework in Frameworks */,
+				C2A8C0351AA5101D00111BBB /* CoreTelephony.framework in Frameworks */,
+				C2A8C0331AA5100F00111BBB /* CoreGraphics.framework in Frameworks */,
+				C2A8C0311AA5100000111BBB /* AVFoundation.framework in Frameworks */,
+				C2A8C02F1AA50FF400111BBB /* AudioToolbox.framework in Frameworks */,
+				C2A8C02D1AA50FE900111BBB /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +115,15 @@
 		C2EDE9C01A86395D004B8614 = {
 			isa = PBXGroup;
 			children = (
+				C2A8C03E1AA5106700111BBB /* SystemConfiguration.framework */,
+				C2A8C03A1AA5104F00111BBB /* MessageUI.framework */,
+				C2A8C0381AA5103B00111BBB /* EventKitUI.framework */,
+				C2A8C0361AA5103400111BBB /* EventKit.framework */,
+				C2A8C0341AA5101D00111BBB /* CoreTelephony.framework */,
+				C2A8C0321AA5100F00111BBB /* CoreGraphics.framework */,
+				C2A8C0301AA5100000111BBB /* AVFoundation.framework */,
+				C2A8C02E1AA50FF400111BBB /* AudioToolbox.framework */,
+				C2A8C02C1AA50FE900111BBB /* AdSupport.framework */,
 				C2EDE9CB1A86395E004B8614 /* Runalarm */,
 				C2EDE9E11A86395E004B8614 /* RunalarmTests */,
 				C2EDE9CA1A86395E004B8614 /* Products */,
@@ -77,12 +142,20 @@
 		C2EDE9CB1A86395E004B8614 /* Runalarm */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8C02A1AA50F3000111BBB /* GoogleMobileAds.framework */,
+				C2EDE9D01A86395E004B8614 /* SettingViewController.swift */,
+				C20320DE1AA1EEFE00680DF4 /* AlarmManager.swift */,
+				C2A8C0481AA8A9A500111BBB /* MediaPlayer.swift */,
+				C2EDE9F01A8C1069004B8614 /* WakeupViewController.swift */,
+				C2BBB5D81A96903800F840C0 /* GoodMorningViewController.swift */,
+				C2BBB5DA1A996A5200F840C0 /* Runalarm.entitlements */,
 				C2EDE9CE1A86395E004B8614 /* AppDelegate.swift */,
-				C2EDE9D01A86395E004B8614 /* ViewController.swift */,
+				C2EDE9EE1A8797ED004B8614 /* HRToast+UIView.swift */,
 				C2EDE9D21A86395E004B8614 /* Main.storyboard */,
 				C2EDE9D51A86395E004B8614 /* Images.xcassets */,
 				C2EDE9D71A86395E004B8614 /* LaunchScreen.xib */,
 				C2EDE9CC1A86395E004B8614 /* Supporting Files */,
+				C2A8C0411AA5172F00111BBB /* AdMob-Bridging-Header.h */,
 			);
 			path = Runalarm;
 			sourceTree = "<group>";
@@ -90,6 +163,13 @@
 		C2EDE9CC1A86395E004B8614 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8C0461AA5D5F700111BBB /* VolumeControlIcon.png */,
+				C2A8C0421AA5CDE300111BBB /* wakeup_03.mp3 */,
+				C2A8C0261AA494C300111BBB /* wakeup_03_short.mp3 */,
+				C2BBB5EB1A9E853D00F840C0 /* ic_runalarm_180x180_nobg.png */,
+				C2BBB5DF1A9BDA2300F840C0 /* good_morning.mp3 */,
+				C2C306C21A90B8F400EFEDD2 /* SettingBackground.JPG */,
+				C2C306C11A90B8F400EFEDD2 /* GoodMorningBackground.JPG */,
 				C2EDE9CD1A86395E004B8614 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,6 +241,15 @@
 				TargetAttributes = {
 					C2EDE9C81A86395D004B8614 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = G6V8V526G2;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					C2EDE9DD1A86395E004B8614 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -192,9 +281,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A8C0471AA5D5F700111BBB /* VolumeControlIcon.png in Resources */,
+				C2BBB5EC1A9E853D00F840C0 /* ic_runalarm_180x180_nobg.png in Resources */,
+				C2BBB5E01A9BDA2300F840C0 /* good_morning.mp3 in Resources */,
+				C2A8C0431AA5CDE300111BBB /* wakeup_03.mp3 in Resources */,
 				C2EDE9D41A86395E004B8614 /* Main.storyboard in Resources */,
 				C2EDE9D91A86395E004B8614 /* LaunchScreen.xib in Resources */,
+				C2C306C41A90B8F400EFEDD2 /* SettingBackground.JPG in Resources */,
 				C2EDE9D61A86395E004B8614 /* Images.xcassets in Resources */,
+				C2C306C31A90B8F400EFEDD2 /* GoodMorningBackground.JPG in Resources */,
+				C2A8C0281AA494C300111BBB /* wakeup_03_short.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2EDE9D11A86395E004B8614 /* ViewController.swift in Sources */,
+				C20320DF1AA1EEFE00680DF4 /* AlarmManager.swift in Sources */,
+				C2A8C0491AA8A9A500111BBB /* MediaPlayer.swift in Sources */,
+				C2EDE9D11A86395E004B8614 /* SettingViewController.swift in Sources */,
+				C2EDE9F11A8C1069004B8614 /* WakeupViewController.swift in Sources */,
 				C2EDE9CF1A86395E004B8614 /* AppDelegate.swift in Sources */,
+				C2EDE9EF1A8797ED004B8614 /* HRToast+UIView.swift in Sources */,
+				C2BBB5D91A96903800F840C0 /* GoodMorningViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +437,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Runalarm",
+				);
 				INFOPLIST_FILE = Runalarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/AdMob-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -346,9 +457,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Runalarm",
+				);
 				INFOPLIST_FILE = Runalarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/AdMob-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -405,6 +526,7 @@
 				C2EDE9EA1A86395E004B8614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2EDE9EB1A86395E004B8614 /* Build configuration list for PBXNativeTarget "RunalarmTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +535,7 @@
 				C2EDE9ED1A86395E004B8614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingScene" id="vXZ-lx-hvc" customClass="SettingViewController" customModule="Runalarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,88 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SettingBackground.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="dG9-oI-F8h">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please set the alarm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-8a-2ya">
+                                <rect key="frame" x="148" y="95" width="304" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wkx-Kh-qha">
+                                <rect key="frame" x="276" y="435" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onAlarmSet:" destination="vXZ-lx-hvc" eventType="valueChanged" id="M7d-F9-41O"/>
+                                </connections>
+                            </switch>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCB-K3-9hJ">
+                                <rect key="frame" x="0.0" y="219" width="600" height="162"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vPD-8a-2ya" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="80m-AR-bfD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Wkx-Kh-qha" secondAttribute="bottom" constant="60" id="8d4-i7-G1i"/>
+                            <constraint firstAttribute="centerY" secondItem="dG9-oI-F8h" secondAttribute="centerY" id="Gwd-ac-2dU"/>
+                            <constraint firstAttribute="centerX" secondItem="vPD-8a-2ya" secondAttribute="centerX" id="Hb7-QN-S0a"/>
+                            <constraint firstAttribute="centerY" secondItem="dCB-K3-9hJ" secondAttribute="centerY" constant="50" id="aUJ-gy-2bE"/>
+                            <constraint firstAttribute="centerX" secondItem="Wkx-Kh-qha" secondAttribute="centerX" id="cM9-Et-JBs"/>
+                            <constraint firstAttribute="centerX" secondItem="dG9-oI-F8h" secondAttribute="centerX" id="iNA-41-Dk2"/>
+                            <constraint firstAttribute="centerX" secondItem="Wkx-Kh-qha" secondAttribute="centerX" id="kMp-gM-AwU"/>
+                            <constraint firstAttribute="centerX" secondItem="dCB-K3-9hJ" secondAttribute="centerX" id="nJp-hy-EhM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alarmSwitch" destination="Wkx-Kh-qha" id="6oT-ZU-483"/>
+                        <outlet property="alarmTimePickerView" destination="dCB-K3-9hJ" id="hbe-Cg-9oN"/>
+                        <outlet property="bgImage" destination="dG9-oI-F8h" id="d1j-YY-vMm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="391" y="118"/>
+        </scene>
+        <!--Good Morning View Controller-->
+        <scene sceneID="far-Rd-9fG">
+            <objects>
+                <viewController storyboardIdentifier="GoodMorningScene" id="6Zl-zL-GJv" customClass="GoodMorningViewController" customModule="Runalarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HCp-YW-d5S"/>
+                        <viewControllerLayoutGuide type="bottom" id="rkG-yT-xZd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LBt-9J-1fh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="GoodMorningBackground.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-8s-lUl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GOOD MORNING!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ld-yc-iS3">
+                                <rect key="frame" x="147" y="281" width="307" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="7ld-yc-iS3" secondAttribute="centerY" id="VJE-XV-j3R"/>
+                            <constraint firstAttribute="centerX" secondItem="7ld-yc-iS3" secondAttribute="centerX" id="VRl-K4-Tb1"/>
+                            <constraint firstAttribute="centerX" secondItem="hfz-8s-lUl" secondAttribute="centerX" id="r7j-ba-rWW"/>
+                            <constraint firstAttribute="centerY" secondItem="hfz-8s-lUl" secondAttribute="centerY" id="rIj-0y-rfH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7S-H0-Q7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GoodMorningBackground.JPG" width="1280" height="853"/>
+        <image name="SettingBackground.JPG" width="1280" height="853"/>
+    </resources>
 </document>
