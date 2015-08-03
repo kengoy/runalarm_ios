@@ -12,7 +12,8 @@ import GoogleMobileAds
 class GoodMorningViewController: UIViewController, GADBannerViewDelegate{
 
     let player = MediaPlayer(file:"good_morning", type: "mp3")
-
+    let ud = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,6 +61,40 @@ class GoodMorningViewController: UIViewController, GADBannerViewDelegate{
         userDefault.setInteger(wakeupCount+1, forKey: KEY_WAKEUP_COUNT)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        var userDefault:NSUserDefaults = NSUserDefaults()
+        var wakeupCount:Int = userDefault.integerForKey(KEY_WAKEUP_COUNT)
+
+        if wakeupCount >= 3 {
+            if !ud.boolForKey("reviewed") {
+                let alertController = UIAlertController(
+                    title: "Have a wonderful day!",
+                    message: "Thank you for using this app. Could you review this app?",
+                    preferredStyle: .Alert)
+            
+                let reviewAction = UIAlertAction(title: "Review now", style: .Default) {
+                    action in
+                    let url = NSURL(string: "itms-apps://itunes.apple.com/app/id974966247")
+                    UIApplication.sharedApplication().openURL(url!)
+                    self.ud.setObject(true, forKey: "reviewed")
+                }
+                let yetAction = UIAlertAction(title: "not now", style: .Default) {
+                    action in
+                    self.ud.setObject(false, forKey: "reviewed")
+                }
+                let neverAction = UIAlertAction(title: "NEVER", style: .Cancel) {
+                    action in
+                    self.ud.setObject(true, forKey: "reviewed")
+                }
+            
+                alertController.addAction(reviewAction)
+                alertController.addAction(yetAction)
+                alertController.addAction(neverAction)
+                presentViewController(alertController, animated: true, completion: nil)
+            }
+        }
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,7 +104,7 @@ class GoodMorningViewController: UIViewController, GADBannerViewDelegate{
         return false
     }
     
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 

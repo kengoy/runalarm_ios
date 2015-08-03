@@ -142,7 +142,7 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             saveAlarmTime()
             setAlarm();
             self.view.makeToast(message: "Alarm is set for " + alarmHour.description + ":" +
-                NSString(format: "%02d", alarmMinute) + ". Good night.")
+                (NSString(format: "%02d", alarmMinute) as String) + ". Good night.")
         } else {
             cancelAlarm();
             self.view.makeToast(message: "Alarm is unset. ")

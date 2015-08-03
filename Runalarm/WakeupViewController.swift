@@ -16,6 +16,7 @@ class WakeupViewController: UIViewController, GADBannerViewDelegate {
 
     var nowYouAreLabel:UILabel = UILabel()
     var yourActivityLabel:UILabel = UILabel()
+    var snoozeButton: UIButton!
     
     let motionActivityManager = CMMotionActivityManager()
 
@@ -93,7 +94,7 @@ class WakeupViewController: UIViewController, GADBannerViewDelegate {
         
         let constraintBottomForNowYouAreLabel = NSLayoutConstraint(
             item: nowYouAreLabel, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal,
-            toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: -100)
+            toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: -150)
         self.view.addConstraint(constraintBottomForNowYouAreLabel)
         
         let constraintCenterForNowYouAreLabel = NSLayoutConstraint(
@@ -109,7 +110,7 @@ class WakeupViewController: UIViewController, GADBannerViewDelegate {
         
         let constraintBottomForYourActivityLabel = NSLayoutConstraint(
             item: yourActivityLabel, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal,
-            toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: -60)
+            toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: -110)
         self.view.addConstraint(constraintBottomForYourActivityLabel)
         
         let constraintCenterForYourActivityLabel = NSLayoutConstraint(
@@ -150,6 +151,40 @@ class WakeupViewController: UIViewController, GADBannerViewDelegate {
             let bannerView:GADBannerView = getAdBannerView()
             self.view.addSubview(bannerView)
         }
+
+        // Buttonを生成する.
+        snoozeButton = UIButton()
+        
+        // サイズを設定する.
+        snoozeButton.frame = CGRectMake(0,0,200,30)
+        
+        // 背景色を設定する.
+        snoozeButton.backgroundColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 0.2)
+
+        //ボーダー幅
+        snoozeButton.layer.borderWidth = 0.5
+
+        // 枠を丸くする.
+        snoozeButton.layer.masksToBounds = true
+        
+        // タイトルを設定する(通常時).
+        snoozeButton.setTitle("Snooze in 5 minutes", forState: UIControlState.Normal)
+//        snoozeButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
+        // コーナーの半径を設定する.
+        snoozeButton.layer.cornerRadius = 10.0
+        
+        // ボタンの位置を指定する.
+        snoozeButton.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.size.height - getAdBannerView().frame.height - 20)
+        
+        // タグを設定する.
+        snoozeButton.tag = 1
+        
+        // イベントを追加する.
+        snoozeButton.addTarget(self, action: "onClickSnoozeButton:", forControlEvents: .TouchUpInside)
+        
+        // ボタンをViewに追加する.
+        self.view.addSubview(snoozeButton)
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -317,12 +352,24 @@ class WakeupViewController: UIViewController, GADBannerViewDelegate {
     func transitToGoodMorningScene() {
         player.stop()
         isToBeDismissed = true
-        let goodMorningViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("GoodMorningScene") as UIViewController
+        let goodMorningViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("GoodMorningScene") as! UIViewController
 
         goodMorningViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
         presentViewController(goodMorningViewController, animated: true, completion: nil);
     }
 
+    internal func onClickSnoozeButton(sender: UIButton){
+        player.stop()
+        self.motionActivityManager.stopActivityUpdates()
+
+        // snooze in 5 mins
+        var alarmManager : AlarmManager = AlarmManager.sharedInstance
+        alarmManager.cancelAlarm()
+        alarmManager.setAlarm(5)
+
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
     private func getAdBannerView() -> GADBannerView {
         var bannerView: GADBannerView = GADBannerView()
         bannerView = GADBannerView(adSize:kGADAdSizeBanner)
